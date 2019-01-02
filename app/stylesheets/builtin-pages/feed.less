@@ -1,5 +1,13 @@
 @import "../base/colors.less";
 
+.feed-wrapper {
+  .builtin-main {
+    border: 1px solid #eee;
+    padding: 20px 20px !important;
+    margin-top: 70px;
+  }
+}
+
 .avatar-container {
   width: 48px;
   height: 48px;
@@ -35,8 +43,6 @@
 
 .new-post-form {
   background: #fff;
-  padding: 10px 20px 10px 10px;
-  border: 1px solid #ddd;
   margin-bottom: 10px;
 
   .inputs {
@@ -82,8 +88,6 @@
 }
 
 .feed {
-  border: 1px solid #ddd;
-
   & > :last-child {
     border-bottom: 0 !important;
   }
@@ -107,8 +111,8 @@
   &.like {
     position: relative;
     background: #fff;
-    padding: 12px 15px;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 15px;
+    border-top: 1px solid #e5e5e5;
 
     &.unread {
       background: #f5f8fa;

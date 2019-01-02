@@ -206,49 +206,26 @@
 }
 
 .pinned-bookmarks-container {
-  width: 460px;
+  width: 90%;
+  max-width: 1200px;
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  @media (min-width: 640px) {
-    width: 580px;
-  }
-
-  @media (min-width: 740px) {
-    width: 700px;
-  }
-
-  @media (min-width: 900px) {
-    width: 830px;
-  }
-
-  @media (min-width: 1100px) {
-    width: 950px;
-  }
 }
 
 .pinned-bookmarks {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
   width: 100%;
 
-  @media (min-width: 640px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  @media (min-width: 740px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-
   @media (min-width: 900px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .add-pinned-btn {
@@ -260,19 +237,16 @@
 }
 
 .pinned-bookmark {
-  width: 120px;
-  height: 120px;
-  background: #fff;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 20px;
   font-size: .8rem;
-  outline: 1px solid #ddd;
 
   * {
     cursor: pointer;
   }
 
   &:hover {
-    outline: 1px solid #ddd;
     background: #eee;
 
     &.sortable-ghost {
@@ -287,16 +261,13 @@
   .favicon {
     width: 32px;
     height: 32px;
-    margin-top: 30px;
+    margin-right: 10px;
   }
 
   .title {
     &:extend(.overflow-ellipsis);
-    max-width: 100px;
-    margin: auto;
-    margin-top: 10px;
     color: fadeout(@color-text, 10%);
-    font-size: .675rem;
+    font-size: .8rem;
 
     /*
     TODO(bgimg) restore with background images -prf

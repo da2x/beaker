@@ -38,7 +38,7 @@ function update () {
           ${follows.map(f => renderUserCard(f, currentUserSession))}
           ${foafs.map(f => renderUserCard(f, currentUserSession))}
         </div>
-        <div style="background: #fff; padding: 20px; border: 1px solid #ddd">
+        <div style="background: #fff">
           <h3 class="subtitle-heading">Pre-release note</h3>
           <div>The search feature is still in progress. For now, this page only lists users in your network.</div>
         </div>
