@@ -31,14 +31,14 @@ export function renderPermDesc ({bg, url, permId, permParam, permOpts}) {
     api.createTab(url)
   }
   switch (permId) {
-    case 'js': return 'Run Javascript'
+    case 'js': return 'Run JavaScript'
     case 'media': return 'Use your camera and microphone'
     case 'geolocation': return 'Know your location'
-    case 'notifications': return 'Create desktop notifications'
+    case 'notifications': return 'Send you notifications'
     case 'midiSysex': return 'Access your MIDI devices'
-    case 'pointerLock': return 'Lock your cursor'
+    case 'pointerLock': return 'Lock your mouse cursor'
     case 'fullscreen': return 'Go fullscreen'
-    case 'openExternal': return `Open this URL in another program: ${shorten(url, 128)}`
+    case 'openExternal': return `Open this URL in another program: “${shorten(url, 128)}”`
     case 'experimentalLibrary': return 'Read and modify your Library'
     case 'experimentalDatPeers': return 'Send and receive messages with peers'
 
@@ -47,10 +47,10 @@ export function renderPermDesc ({bg, url, permId, permParam, permOpts}) {
       return 'contact ' + permParam
 
     case 'download':
-      return html`<span>Download ${permOpts.filename}</span>`
+      return html`<span>Download “${permOpts.filename}”</span>`
 
     case 'createDat':
-      if (permOpts.title) return `Create a new Dat archive, "${permOpts.title}"`
+      if (permOpts.title) return `Create a new Dat archive, “"${permOpts.title}”"`
       return 'Create a new Dat archive'
 
     case 'modifyDat':
